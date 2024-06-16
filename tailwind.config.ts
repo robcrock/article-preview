@@ -1,13 +1,14 @@
-import type { Config } from "tailwindcss"
+const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,7 +19,29 @@ const config = {
       },
     },
     extend: {
+      // Custom screen breakpoints
+      screens: {
+        mobile: "375px",
+        desktop: "1440px",
+      },
+      // Custom font settings
+      fontFamily: {
+        manrope: ["Manrope", ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        body: "13px",
+      },
+      fontWeight: {
+        medium: "500",
+        bold: "700",
+      },
       colors: {
+        fem: {
+          "very-dark-grayish-blue": "hsl(217, 19%, 35%)",
+          "desaturated-dark-blue": "hsl(214, 17%, 51%)",
+          "grayish-blue": "hsl(212, 23%, 69%)",
+          "light-grayish-blue": "hsl(210, 46%, 95%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,6 +98,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
