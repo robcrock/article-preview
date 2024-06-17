@@ -5,7 +5,7 @@ type TProps = {
   link: string;
 };
 
-export const Attribution = ({ name, link }: TProps) => {
+export const FemAttribution = ({ name, link }: TProps) => {
   return (
     <div className="attribution decoration-none w-full text-center text-xs font-light text-slate-400">
       <span>Challenge by </span>

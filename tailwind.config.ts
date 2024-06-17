@@ -32,6 +32,7 @@ const config = {
         body: "13px",
       },
       fontWeight: {
+        ...defaultTheme.fontWeight,
         medium: "500",
         bold: "700",
       },
