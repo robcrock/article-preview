@@ -3,6 +3,7 @@ import { FemHero } from "./fem-hero";
 import { FemAvatar } from "./fem-avatar";
 import { Share } from "./icons/share";
 import { FemShareButton } from "./fem-share-button";
+import { FemPopover } from "./fem-popover";
 
 type Props = {};
 
@@ -32,7 +33,7 @@ export const FemCard = (props: Props) => {
               <p>28 Jun 2020</p>
             </div>
           </div>
-          <FemShareButton />
+          <FemPopover trigger={<FemShareButton />} />
         </section>
       </CardContent>
     </Card>
