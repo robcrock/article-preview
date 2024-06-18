@@ -5,9 +5,12 @@ type Props = {};
 
 export const FemHero = (props: Props) => {
   return (
-    <div className="h-[280px] w-[285px] p-0">
+    <div className="relative h-[285px] w-[280px]">
       <Image
-        className="h-[280px] w-[285px] object-cover p-0"
+        layout="fill"
+        objectFit="cover"
+        placeholder="blur"
+        objectPosition="0% 0%"
         src={image}
         alt="drawers"
       />
