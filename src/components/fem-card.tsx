@@ -1,40 +1,33 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { FemHero } from "./fem-hero";
 import { FemAvatar } from "./fem-avatar";
-import { Share } from "./icons/share";
 import { FemShareButton } from "./fem-share-button";
 import { FemPopover } from "./fem-popover";
+import { FemFooterMobile } from "./fem-footer-mobile";
+import { FemFooterDesktop } from "./fem-footer-desktop";
 
 type Props = {};
 
 export const FemCard = (props: Props) => {
   return (
-    <Card className="m-0 flex max-h-[280px] w-[730px] overflow-hidden rounded-[10px]">
+    <Card className="m-0 flex h-[512px] w-[327px] flex-col overflow-hidden rounded-[10px] md:max-h-[280px] md:w-[730px] md:flex-row">
       <CardHeader className="p-0">
         <FemHero />
       </CardHeader>
-      <CardContent className="flex flex-col gap-5 px-10 py-8">
+      <CardContent className="flex h-full flex-col justify-between px-8 pb-5 pt-8 md:px-10">
         <section className="flex flex-col gap-3">
-          <h2 className="font-manrope text-[20px] font-bold">
+          <h2 className="font-manrope text-md font-bold md:text-[20px]">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h2>
-          <p className="text-body font-medium">
+          <p className="text-body font-medium tracking-[0.12px]">
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
           </p>
         </section>
-        <section className="flex justify-between">
-          <div className="flex gap-4">
-            <FemAvatar />
-            <div className="flex flex-col">
-              <p className="font-manrope font-bold">Michelle Appleton</p>
-              <p>28 Jun 2020</p>
-            </div>
-          </div>
-          <FemPopover trigger={<FemShareButton />} />
-        </section>
+        <FemFooterMobile />
+        <FemFooterDesktop />
       </CardContent>
     </Card>
   );
