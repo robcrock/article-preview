@@ -14,7 +14,7 @@ export const FemCard = (props: Props) => {
       <CardHeader className="p-0">
         <FemHero />
       </CardHeader>
-      <CardContent className="flex h-full flex-col justify-between px-8 pb-5 pt-8 md:px-10">
+      <CardContent className="flex h-full flex-col justify-between p-0">
         <section className="flex flex-col gap-3">
           <h2 className="font-manrope text-md font-bold md:text-[20px]">
             Shift the overall look and feel by adding these wonderful touches to

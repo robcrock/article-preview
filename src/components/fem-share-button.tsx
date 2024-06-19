@@ -8,7 +8,7 @@ type Props = {
 export const FemShareButton = ({ onClick }: Props) => {
   return (
     <Button
-      className="rounded-full"
+      className="h-8 w-8 rounded-full"
       variant="outline"
       size="icon"
       onClick={onClick}

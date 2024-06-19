@@ -6,6 +6,7 @@ import { FemShareButton } from "./fem-share-button";
 import { Facebook } from "./icons/facebook";
 import { Twitter } from "./icons/twitter";
 import { Pinterest } from "./icons/pinterest";
+import { cn } from "@/lib/utils";
 
 type Props = {};
 
@@ -13,7 +14,12 @@ export const FemFooterMobile = (props: Props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <section className="flex min-h-[52px] justify-between md:hidden">
+    <section
+      className={cn(
+        `align-center flex justify-between px-8 py-[22px] md:hidden`,
+        isVisible ? "bg-fem-very-dark-grayish-blue" : "bg-white",
+      )}
+    >
       {!isVisible && (
         <div className="flex gap-4">
           <FemAvatar />
@@ -24,12 +30,16 @@ export const FemFooterMobile = (props: Props) => {
         </div>
       )}
       {isVisible && (
-        <div className="bg-fem-very-dark-grayish-blue align-center flex justify-center gap-4">
-          <p className="text-fem-grayish-blue tracking-[5px]">SHARE</p>
-          <div className="flex h-full items-center gap-4">
-            <Facebook />
-            <Twitter />
-            <Pinterest />
+        <div className="flex items-center justify-center gap-4">
+          <div className="flex gap-5">
+            <p className="text-body text-fem-grayish-blue tracking-[5px]">
+              SHARE
+            </p>
+            <div className="flex h-full items-center gap-4">
+              <Facebook />
+              <Twitter />
+              <Pinterest />
+            </div>
           </div>
         </div>
       )}
