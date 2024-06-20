@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { FemAvatar } from "./fem-avatar";
 import { FemShareButton } from "./fem-share-button";
 import { Facebook } from "./icons/facebook";
@@ -8,9 +8,11 @@ import { Twitter } from "./icons/twitter";
 import { Pinterest } from "./icons/pinterest";
 import { cn } from "@/lib/utils";
 
-type Props = {};
+type Props = {
+  author: ReactNode;
+};
 
-export const FemFooterMobile = (props: Props) => {
+export const FemFooterMobile = ({ author }: Props) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -20,17 +22,7 @@ export const FemFooterMobile = (props: Props) => {
         isActive ? "bg-fem-very-dark-grayish-blue" : "bg-white",
       )}
     >
-      {!isActive && (
-        <div className="flex min-h-11 gap-4">
-          <FemAvatar />
-          <div className="flex flex-col">
-            <p className="font-manrope font-normal">Michelle Appleton</p>
-            <p className="text-body tracking=[0.12] font-extralight">
-              28 Jun 2020
-            </p>
-          </div>
-        </div>
-      )}
+      {!isActive && <>{author}</>}
       {isActive && (
         <div className="flex justify-center gap-4">
           <div className="flex min-h-11 items-center gap-5">

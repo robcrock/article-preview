@@ -1,16 +1,15 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-type Props = {};
+type Props = {
+  avatarUrl: string;
+  initials: string;
+};
 
-export const FemAvatar = (props: Props) => {
+export const FemAvatar = ({ avatarUrl, initials }: Props) => {
   return (
     <Avatar>
-      <AvatarImage
-        src={
-          "https://raw.githubusercontent.com/robcrock/article-preview/main/public/images/avatar-michelle.jpg"
-        }
-      />
-      <AvatarFallback>MA</AvatarFallback>
+      <AvatarImage src={avatarUrl} />
+      <AvatarFallback>{initials}</AvatarFallback>
     </Avatar>
   );
 };
