@@ -3,7 +3,7 @@ import { FemCard } from "@/components/fem-card";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-4 p-24">
+    <main className="bg-fem-light-grayish-blue flex min-h-screen flex-col items-center gap-4 p-24">
       {/* mobile */}
       {/* card container */}
       {/* -- hero image */}

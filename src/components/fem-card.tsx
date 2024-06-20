@@ -10,20 +10,20 @@ type Props = {};
 
 export const FemCard = (props: Props) => {
   return (
-    <Card className="m-0 flex h-[512px] w-[327px] flex-col overflow-hidden rounded-[10px] md:max-h-[280px] md:w-[730px] md:flex-row">
+    <Card className="m-0 flex h-[512px] w-[327px] flex-col overflow-hidden rounded-[10px] border-none md:max-h-[280px] md:w-[730px] md:flex-row">
       <CardHeader className="p-0">
         <FemHero />
       </CardHeader>
       <CardContent className="flex h-full flex-col justify-between p-0">
-        <section className="flex flex-col gap-3">
-          <h2 className="font-manrope text-md font-bold md:text-[20px]">
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
+        <section className="mx-8 mt-9 flex flex-col gap-3">
+          <h2 className="font-manrope text-md font-medium md:text-[20px]">
+            Shift the overall look and feel by adding these wonderful touches{" "}
+            <br /> to furniture in your home
           </h2>
-          <p className="text-body font-medium tracking-[0.12px]">
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I’ve got some simple tips to help
-            you make any room feel complete.
+          <p className="text-body font-light tracking-[0.12px]">
+            Ever been in a room and felt like <br /> something was missing?
+            Perhaps it felt slightly bare and uninviting. I’ve got some simple
+            tips to help you make any room feel complete.
           </p>
         </section>
         <FemFooterMobile />
