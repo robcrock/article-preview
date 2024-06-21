@@ -19,7 +19,7 @@ export const FemHero = (props: Props) => {
         placeholder="blur"
         objectPosition={`0% ${width < 768 ? "20%" : "0%"}`}
         src={image}
-        alt="drawers"
+        alt="Drawers"
       />
     </div>
   );

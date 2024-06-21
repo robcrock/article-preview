@@ -1,6 +1,5 @@
 import { FemShareButton } from "./fem-share-button";
 import { FemPopover } from "./fem-popover";
-import { FemAuthor } from "./fem-author";
 import { ReactNode } from "react";
 
 type Props = {
